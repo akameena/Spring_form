@@ -13,5 +13,6 @@
 	<br>
 	Last Name: ${employee.lname}
 	
+	field: ${employee.field}
 </body>
 </html>

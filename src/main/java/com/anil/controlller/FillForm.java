@@ -17,6 +17,7 @@ public class FillForm {
 		Employee emp = new Employee();
 		
 		//emp.setFname("anil"); 
+		System.out.println(emp.getFieldList());
 											 // if we add this line it effect on jsp page as showing name anil input field
 		model.addAttribute("employee",emp); // here we need to add a Employee object to model for process form on jsp page
 		return "Home";
@@ -29,5 +30,7 @@ public class FillForm {
 		System.out.println(employee);
 		return "showemp";
 	}
+	
+	
 }
 

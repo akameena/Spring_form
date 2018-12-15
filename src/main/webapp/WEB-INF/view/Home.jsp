@@ -9,6 +9,7 @@
 </head>
 <body>
 	hello...
+	
 	<!--  when form is loded spring mvc will call employee.getfname() and employee.getlname -->
 	 <form:form action="process" modelAttribute="employee">
 		First Name:<form:input path="fname"/> 
@@ -19,6 +20,13 @@
 		
 		<br>
 		<br>
+		Field: <form:select path="field">
+			<%-- <form:option value="Jaba" label="Java"/>
+			<form:option value="python" label="Python"/>
+			<form:option value="c++" label="C++"/> --%>
+			
+			<form:options items="${employee.fieldList}"/> <!--  here items show collection of data-->
+		</form:select>
 		<input type = "submit" value="submit">
 	</form:form> 
 </body>
