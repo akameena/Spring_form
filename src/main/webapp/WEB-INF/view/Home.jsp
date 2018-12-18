@@ -24,6 +24,11 @@
 		
 		<br>
 		<br>
+		Age: <form:input path="age"/>
+		<form:errors path ="age" cssClass="error" />
+		<br>
+		<br>
+		
 		Field: <form:select path="field">
 			<%-- <form:option value="Jaba" label="Java"/>
 			<form:option value="python" label="Python"/>
