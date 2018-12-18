@@ -2,9 +2,16 @@ package com.anil.model;
 
 import java.util.HashMap;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Employee {
+	
+	@NotNull(message="is required")
+	@Size(min=1, message="is required")
 	private String fname;
 	private String lname;
+	
 	private String  field;
 	private HashMap<String,String> fieldList;
 	

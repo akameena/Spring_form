@@ -6,6 +6,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style>
+		.error {color:red}
+	</style>
 </head>
 <body>
 	hello...
@@ -13,6 +16,7 @@
 	<!--  when form is loded spring mvc will call employee.getfname() and employee.getlname -->
 	 <form:form action="process" modelAttribute="employee">
 		First Name:<form:input path="fname"/> 
+				   <form:errors path ="fname" cssClass="error" />
 		<br>	<!-- fname and lname is same as employee field -->							
 		<br>
 		Last Name: <form:input path="lname"/>  <!--model attribute employee 
