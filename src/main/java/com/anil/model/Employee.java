@@ -5,6 +5,7 @@ import java.util.HashMap;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Employee {
@@ -13,9 +14,14 @@ public class Employee {
 	@Size(min=1, message="is required")
 	private String fname;
 	private String lname;
+	
 	@Min(value = 18,message = "youre age should be >18" )
 	@Max(value = 75,message = "it's retirment time for u")
 	private int age;
+	
+	@Pattern(regexp="^[0-9a-zA-Z]{5}", message = "only 5 chracter and digit or u can leave blank")
+	private String postalcode;
+	
 	private String  field;
 	private HashMap<String,String> fieldList;
 	
@@ -28,6 +34,13 @@ public class Employee {
 		fieldList.put("go","go");
 		
 		
+	}
+	public String getPostalcode() {
+		return postalcode;
+	}
+
+	public void setPostalcode(String postalcode) {
+		this.postalcode = postalcode;
 	}
 	
 	public int getAge() {

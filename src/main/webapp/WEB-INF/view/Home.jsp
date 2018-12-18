@@ -26,6 +26,12 @@
 		<br>
 		Age: <form:input path="age"/>
 		<form:errors path ="age" cssClass="error" />
+		
+		
+		<br>
+		<br>
+		Post Code: <form:input path="postalcode"/>
+		<form:errors path ="postalcode" cssClass="error" />
 		<br>
 		<br>
 		
