@@ -34,13 +34,16 @@
 		<form:errors path ="postalcode" cssClass="error" />
 		<br>
 		<br>
-		
+		Gmailid:<form:input path="gmailid"/>
+		<form:errors path ="gmailid" cssClass="error" />
+		<br>
+		<br>
 		Field: <form:select path="field">
 			<%-- <form:option value="Jaba" label="Java"/>
 			<form:option value="python" label="Python"/>
 			<form:option value="c++" label="C++"/> --%>
-			
 			<form:options items="${employee.fieldList}"/> <!--  here items show collection of data-->
+			
 		</form:select>
 		<input type = "submit" value="submit">
 	</form:form> 

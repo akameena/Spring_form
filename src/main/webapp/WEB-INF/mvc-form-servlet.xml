@@ -23,7 +23,17 @@
 		<property name="prefix" value="/WEB-INF/view/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-
+	
+	
+	<!-- 
+    <bean id="messageSource" 
+          class="org.springframework.context.support.ResourceBundleMessageSource">
+     
+        <property name="" value="resources/messages" />
+     
+    </bean>
+ --><!--  the code use for to read messages from property file for some error  -->
+ 
 </beans>
 
 

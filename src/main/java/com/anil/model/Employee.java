@@ -8,6 +8,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import com.anil.annotation.EndWith;
+
 public class Employee {
 	
 	@NotNull(message="is required")
@@ -15,10 +17,13 @@ public class Employee {
 	private String fname;
 	private String lname;
 	
+	@NotNull(message="is required")
 	@Min(value = 18,message = "youre age should be >18" )
 	@Max(value = 75,message = "it's retirment time for u")
-	private int age;
+	private Integer age; // integer used for required field  otherwise we can use int 
 	
+	@EndWith(value = "@gmail.com",message = "your mail id must end with @gmail.com ")
+	private String gmailid;
 	@Pattern(regexp="^[0-9a-zA-Z]{5}", message = "only 5 chracter and digit or u can leave blank")
 	private String postalcode;
 	
@@ -35,6 +40,15 @@ public class Employee {
 		
 		
 	}
+	
+	public String getGmailid() {
+		return gmailid;
+	}
+
+	public void setGmailid(String gmailid) {
+		this.gmailid = gmailid;
+	}
+
 	public String getPostalcode() {
 		return postalcode;
 	}
@@ -43,11 +57,11 @@ public class Employee {
 		this.postalcode = postalcode;
 	}
 	
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 
