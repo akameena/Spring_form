@@ -13,9 +13,9 @@ import javax.validation.Payload;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface EndWith {
 	 public String value() default "@gmail.com";
-	 public String message() default "your emai ld id must be gmail type";
+	 public String message() default "your emai id must be gmail type";
 	 
-	 public Class<?>[] groups() default {};
+	 public Class<?>[] groups() default {}; 
 		
 		// define default payloads
 		public Class<? extends Payload>[] payload() default {};
